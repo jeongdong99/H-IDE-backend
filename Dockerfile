@@ -15,5 +15,8 @@ RUN apt-get install -y curl && \
 # Copy the JAR file to the working directory
 COPY build/libs/backend-0.0.1-SNAPSHOT.jar app.jar
 
+# Expose port 8080
+EXPOSE 8080
+
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar"]
